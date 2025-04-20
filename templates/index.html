@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tile Word Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div class="top-bar font-large">
+      <h1 class="fade-text">Tile Word Game</h1>
+    </div>
+    <div class="popup" id="intro-popup">
+        <div class="popup-content font-large">
+            <h2 id="popup-title">Welcome to The Tile Word Game</h2>
+            <p id="popup-content-1">1. Use The Arrows to Move the Letters!</p>
+            <p id="popup-content-2">2. Use Those Letters to Create Words!</p>
+            <p id="popup-content-3">3. Submit Your Guess to Earn Points</p>
+            <button class="close-btn font-large" onclick="closePopup()">Understood!</button>
+        </div>
+    </div>
+    <div class="game-container">
+      <div class="game-board">
+        <div class="arrow-grid">
+          <span class="arrow" data-direction="up" data-index="0">🡑</span>
+          <span class="arrow" data-direction="up" data-index="1">🡑</span>
+          <span class="arrow" data-direction="up" data-index="2">🡑</span>
+          <span class="arrow" data-direction="up" data-index="3">🡑</span>
+          <span class="arrow" data-direction="up" data-index="4">🡑</span>
+          <span class="arrow" data-direction="up" data-index="5">🡑</span>
+        </div>
+        <div class="row">
+          <span class="arrow" data-direction="left" data-index="0">🡐</span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="arrow" data-direction="right" data-index="0">🡒</span>
+        </div>
+        <div class="row">
+          <span class="arrow" data-direction="left" data-index="1">🡐</span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="arrow" data-direction="right" data-index="1">🡒</span>
+        </div>
+        <div class="row">
+          <span class="arrow" data-direction="left" data-index="2">🡐</span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="arrow" data-direction="right" data-index="2">🡒</span>
+        </div>
+        <div class="row">
+          <span class="arrow" data-direction="left" data-index="3">🡐</span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="arrow" data-direction="right" data-index="3">🡒</span>
+        </div>
+        <div class="row">
+          <span class="arrow" data-direction="left" data-index="4">🡐</span>
+          <span class="square">Z</span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square">A</span>
+          <span class="arrow" data-direction="right" data-index="4">🡒</span>
+        </div>
+        <div class="row">
+          <span class="arrow" data-direction="left" data-index="5">🡐</span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="square"></span>
+          <span class="arrow" data-direction="right" data-index="5">🡒</span>
+        </div>
+        <div class="arrow-grid">
+          <span class="arrow" data-direction="down" data-index="0">🡓</span>
+          <span class="arrow" data-direction="down" data-index="1">🡓</span>
+          <span class="arrow" data-direction="down" data-index="2">🡓</span>
+          <span class="arrow" data-direction="down" data-index="3">🡓</span>
+          <span class="arrow" data-direction="down" data-index="4">🡓</span>
+          <span class="arrow" data-direction="down" data-index="5">🡓</span>
+        </div>
+      </div>
+    </div>
+    <div class="start-btn-container">
+      <button class="start-btn font-large" id="start-button">Start Game!</button>
+    </div>
+    <div class="points-container">
+      <div class="font-large" id="points">0</div>
+    </div>
+    <div id="score-popup" class="font-large" style="font-size: 27px"></div>
+    <script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/timer.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/storage.js') }}"></script>
+  </body>
+</html>
