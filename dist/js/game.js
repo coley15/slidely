@@ -13,7 +13,7 @@ console.log(localStorage.getItem('score'))
 let score = parseInt(localStorage.getItem('score'));
 
 
-fetch('/static/wordlist/main_wordlist.txt')
+fetch('../wordlist/main_wordlist.txt')
     .then(res => res.text())
     .then(text => {
         valid_words = text
