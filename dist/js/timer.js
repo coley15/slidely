@@ -23,9 +23,9 @@ function updateCountdown() {
         game_started = false;
 
         document.getElementById('popup-title').textContent = "Time's Up!";
-        document.getElementById('popup-content-1').textContent = "Congratulations!";
-        document.getElementById('popup-content-2').textContent = "Your score is: ";
-        document.getElementById('popup-content-3').textContent = "Hello world";
+        document.getElementById('popup-content-1').textContent = "Congratulations, the Game is Over!";
+        document.getElementById('popup-content-2').textContent = "Your score is " + localStorage.getItem('score') + "!";
+        document.getElementById('popup-content-3').textContent = "Come Back Tommorow to Play Again!";
 
         startButton.style.animation = 'none';
 
