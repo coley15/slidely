@@ -1,18 +1,14 @@
-/* DELETE ALL COMMENTS WHEN PROJECT FINSHED */
-
 body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    /*background: linear-gradient(132deg, rgba(220, 220, 220, 1) 0%, rgb(200, 200, 220) 50%, rgb(210, 210, 230) 100%); */
     background: rgba(252,243,227,255);
-    background-size: cover; /* uses the colour above to stretch and cover full screen */
-    background-attachment: fixed; /* ensures background doesn't change when scrolling through page */
+    background-size: cover; 
+    background-attachment: fixed; 
 
 }
 
-/* defining top-bar characteristics */
 .top-bar {
     background: black;
     color: white;
@@ -49,7 +45,6 @@ body {
     to   { --angle: 360deg; }
 }
 
-/* font can be re-used */
 .font-large {
     font-family: "Special Gothic Expanded One", sans-serif;
     font-weight: 400;
@@ -57,7 +52,7 @@ body {
 }
 
 .popup {
-    display: none; /* hidden by default */
+    display: none;
     position: fixed;
     left: 0;
     top: 0;
@@ -66,7 +61,7 @@ body {
     background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
-    z-index: 10; /* make sure this layer always on top */
+    z-index: 10;
 }
 
 .popup-content {
@@ -93,7 +88,7 @@ body {
 }
 
 .close-btn:hover {
-    background-color: #45A049; /* slightly darker green on hover */
+    background-color: #45A049;
     transform: scale(1.05);
 }
 
@@ -129,18 +124,21 @@ body {
     transition: background-color 1.0s ease-out;
 }
 
-.arrow {
-    font-size: 34px;
-    text-align: center;
-    font-family: "Special Gothic Expanded One", sans-serif;
-    cursor: pointer;
+.arrow-img {
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    pointer-events: none;
     user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .arrow-grid {
     display: flex;
     align-items: center;
-    gap: 50px; /* Match your square gap if any */
+    gap: 35px; 
     margin-bottom: 5px;
 }
 
@@ -176,7 +174,7 @@ body {
 }
   
 .fade-text  {
-    animation: fadein 6s;
+    animation: fadein 0.5s;
 }
 
 @keyframes fadein {
@@ -186,7 +184,7 @@ body {
 
 
 .fade-text {
-    animation: fadein 6s;
+    animation: fadein 0.5s;
 }
 
 @keyframes fadein {
@@ -205,17 +203,6 @@ body {
         opacity: 1;
     }
 }
-
-/*.start-btn-container::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: conic-gradient(from var(--angle), rgba(30, 30, 30), rgb(255, 244, 234));
-    z-index: -2; 
-    border-radius: 5px; 
-    animation: 30s spin linear infinite;
-    pointer-events: none;
-} */
 
 .points-container {
     display: flex;
@@ -247,9 +234,8 @@ opacity: 1;
 transform: translate(-50%, -70%);
 }
 
-/* highlight.css */
 .square.highlight {
-    background-color: #b6fcb6;       /* light green */
+    background-color: #b6fcb6;
     transition: background-color 1.0s ease-in-out;
 }
 
