@@ -1,4 +1,6 @@
 User-agent: *
 Disallow:
 
+Allow: /images/favicon.ico
+
 Sitemap: https://slidely.net/sitemap.xml
