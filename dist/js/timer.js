@@ -1,4 +1,4 @@
-const startingMinutes = 0.5;
+const startingMinutes = 3;
 let time = localStorage.getItem('remainingTime') ? parseInt(localStorage.getItem('remainingTime')) : startingMinutes * 60;
 
 const startButton = document.querySelector('.start-btn'); 
