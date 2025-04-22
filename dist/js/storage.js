@@ -1,21 +1,29 @@
+function getLocalDateString() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
+
 function canPlayToday() {
     const lastPlayed = localStorage.getItem("lastPlayed");
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDateString();
     
     return lastPlayed !== today;
 }
 
 function playGame() {
     if (canPlayToday()) {
-        updateGameState()
-        updatePlayButton()
+        updateGameState();
+        updatePlayButton();
     }
 }
 
 function updateGameState() {
-    const today = new Date().toISOString().split('T')[0];
+    const today = getLocalDateString();
 
-    localStorage.setItem('score', 0)
+    localStorage.setItem('score', 0);
     localStorage.setItem('lastPlayed', today);
 }
 
@@ -28,11 +36,6 @@ function updatePlayButton() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    
-
     startButton.addEventListener('click', playGame);
-
-
     updatePlayButton(); 
 });
