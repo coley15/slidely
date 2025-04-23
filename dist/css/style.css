@@ -139,7 +139,6 @@ body {
     display: flex;
     align-items: center;
     gap: 35px; 
-    margin-bottom: 5px;
 }
 
 .game-container {
