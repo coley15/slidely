@@ -18,7 +18,7 @@ fetch('../wordlist/main_wordlist.txt')
         valid_words = text
             .split('\n')
             .map(w => w.trim().toLowerCase())
-            .filter(w => w.length >= 3 && w.length <= 6);
+            .filter(w => w.length >= 4 && w.length <= 6);
 })
 
 
@@ -157,8 +157,7 @@ function afterMove() {
 
     let points_added = 0;
     new_entries.forEach(({ word, cells }) => {
-      if (word.length === 3) points_added += 5;
-      else if (word.length === 4) points_added += 250;
+      if (word.length === 4) points_added += 250;
       else if (word.length === 5) points_added += 500;
       else if (word.length === 6) points_added += 2000;
   
